@@ -1,21 +1,20 @@
-.coins {
+.notes {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 20px 20px 0px;
 }
 
-.coins * {
-  border-radius: 100px;
+.notes * {
   margin-right: 15px;
 }
 
-.coinButton {
+.noteButton {
   height: 50px;
   width: 100px;
-  background-color: gold;
+  background-color: lightgreen;
 }
 
-.coinButton:focus {
+.noteButton:focus {
   outline: none;
 }

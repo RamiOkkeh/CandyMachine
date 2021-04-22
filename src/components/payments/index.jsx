@@ -1,5 +1,6 @@
 import React from "react"
 import Coins from "./coins"
+import Notes from "./notes"
 import "./style.css"
 
 class Payments extends React.Component {
@@ -13,6 +14,7 @@ class Payments extends React.Component {
     render(){
         return(<div className="payments">
                 <Coins data={this.state.coins}></Coins>
+                <Notes data={this.state.notes}></Notes>
                 <div className="pMethod"></div>
                 <div className="pMethod"></div>
             </div>)
