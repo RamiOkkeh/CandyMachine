@@ -23,15 +23,30 @@ class Machine extends React.Component {
         }
     }
 
+    selectItem = (num, callback) => {
+        let item = this.state.snacks[num]
+        if(item[1] > 0){
+            this.props.methods.purchase(item, ()=>{
+                this.setState((old)=> {
+                    old.snacks[num][1]-=1
+                    return old 
+                })
+                callback()
+            })
+        } else {
+            this.props.methods.setHistory("the item you attempt to purchase is out of stock!")
+        }
+    }
+
     render(){
-        let {currentMoney, earned} = this.props
+        let {currentMoney, earned, setHistory} = this.props.methods
         return(<div className="machine">
 
             <div className="candies">
                 {this.state.snacks.map((info, i)=><Candy key={i} num={i} info={info} image={this.state.images[i%5]}></Candy>)}
             </div>
             <div className="flex-column">
-                <Pad></Pad>
+                <Pad selectItem={this.selectItem} setHistory={setHistory}></Pad>
                 <MoneyDisplay money={currentMoney}></MoneyDisplay>
                 <EarnedDisplay earned={earned}></EarnedDisplay>
             </div>

@@ -13,10 +13,11 @@ class Payments extends React.Component {
         }
     }
     render(){
+        let {addCoin, addNote, addCard} = this.props.methods
         return(<div className="payments">
-                <Coins data={this.state.coins} fn={this.props.methods.addCoin}></Coins>
-                <Notes data={this.state.notes} fn={this.props.methods.addNote}></Notes>
-                <Card fn={this.props.methods.addCard}></Card>
+                <Coins data={this.state.coins} fn={addCoin}></Coins>
+                <Notes data={this.state.notes} fn={addNote}></Notes>
+                <Card fn={addCard}></Card>
             </div>)
     }
 }
