@@ -4,7 +4,6 @@ import "./style.css"
 class Candy extends React.Component {
     render(){
         let {num, info, image} = this.props, [name, available, price] = info
-        console.log(image)
         return(<div className="candy" style={{backgroundImage: `url(${image})`}}>
                 <div>{name}
                 <span className="price"> {price}$ </span> 

@@ -1,4 +1,5 @@
 import React from "react"
+import Coins from "./coins"
 import "./style.css"
 
 class Payments extends React.Component {
@@ -11,7 +12,7 @@ class Payments extends React.Component {
     }
     render(){
         return(<div className="payments">
-                <div className="pMethod"></div>
+                <Coins data={this.state.coins}></Coins>
                 <div className="pMethod"></div>
                 <div className="pMethod"></div>
             </div>)
