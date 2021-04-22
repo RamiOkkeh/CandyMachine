@@ -1,3 +1,7 @@
+.numpad {
+  height: 260px;
+}
+
 .pad {
   display: grid;
   grid-template-columns: auto auto auto;

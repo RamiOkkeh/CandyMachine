@@ -24,7 +24,7 @@ class Pad extends React.Component {
         }
     }
     render(){
-        return(<div>
+        return(<div className="numpad">
                 <div className="pad">
                     {this.state.vals.map((val, i)=><Button key={i} val={val} fn={this.onPress}></Button>)}
                 </div>

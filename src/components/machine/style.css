@@ -6,3 +6,8 @@
   grid-template-columns: auto auto auto auto auto;
   width: 900px;
 }
+
+.flex-column {
+  display: flex;
+  flex-flow: column;
+}
