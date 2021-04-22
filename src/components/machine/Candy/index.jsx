@@ -1,4 +1,5 @@
 import React from "react"
+import "./style.css"
 
 class Candy extends React.Component {
     constructor(props){
