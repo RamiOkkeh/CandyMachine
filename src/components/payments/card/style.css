@@ -1,0 +1,20 @@
+.cards {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 20px 0px;
+}
+
+.cards * {
+  margin-right: 15px;
+}
+
+.cardButton {
+  height: 50px;
+  width: 100px;
+  background-color: lightgreen;
+}
+
+.cardButton:focus {
+  outline: none;
+}
