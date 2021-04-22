@@ -8,7 +8,7 @@ Enzyme.configure({adapter: new Adapter()})
 test('renders Pad component', () => {
   let wrapper = shallow(<Pad />);
   let instance = wrapper.instance();
-  console.log(instance)
+  // console.log(instance)
   expect(instance).toBeDefined();
 });
 
@@ -23,15 +23,3 @@ test('it has a method for handling user onClick events', () => {
   let instance = wrapper.instance();
   expect(instance.onPress).toBeDefined();
 });
-
-test('it displays the number the user selected', () => {
-  let wrapper = shallow(<Pad />);
-  console.log(wrapper.find(<div className="itemsDisplay"></div>))
-  expect(wrapper.find(<div className="itemsDisplay"></div>)).toHaveLength(1);
-});
-
-// test('it displays an earned money counter', () => {
-//   let methods = {currentMoney: 0, earned: 0}
-//   let wrapper = shallow(<Pad />);
-//   expect(wrapper.find(EarnedDisplay)).toHaveLength(1);
-// });

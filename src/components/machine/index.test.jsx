@@ -32,7 +32,6 @@ test('it has a method for selecting candies by id', () => {
 test('it renders 25 candy items (5 x 5)', () => {
   let methods = {currentMoney: 0, earned: 0}
   let wrapper = shallow(<Machine methods={methods}/>);
-  // let instance = wrapper.instance();
   expect(wrapper.find(Candy)).toHaveLength(25);
 });
 
