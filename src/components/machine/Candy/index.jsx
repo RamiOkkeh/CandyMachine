@@ -2,10 +2,6 @@ import React from "react"
 import "./style.css"
 
 class Candy extends React.Component {
-    constructor(props){
-        super(props)
-    }
-
     render(){
         let {num, info, image} = this.props, [name, available, price] = info
         console.log(image)

@@ -1,5 +1,6 @@
 import React from "react"
 import Candy from "./Candy"
+import Pad from "./numpad"
 import "./style.css"
 
 class Machine extends React.Component {
@@ -27,6 +28,9 @@ class Machine extends React.Component {
             <div className="candies">
                 {this.state.snacks.map((info, i)=><Candy key={i} num={i} info={info} image={this.state.images[i%5]}></Candy>)}
             </div>
+            <Pad></Pad>
+
+            
         </div>)
     }
 }
