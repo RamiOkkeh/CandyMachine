@@ -5,7 +5,7 @@ function Note ({note, fn}){
     return (<button className="noteButton" onClick={()=>fn(note)}>{note + "$"}</button>)
 }
 
-
+// notes will allow the user to enter 20 or 50 dollar bills
 class Notes extends React.Component {
     render(){
         let {data} = this.props

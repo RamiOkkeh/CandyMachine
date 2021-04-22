@@ -1,11 +1,16 @@
 import React from "react"
 import "./style.css"
 
+// card will allow the user to enter a speciefied amount
 class Cards extends React.Component {
 
+    // method for submitting payment
     cardPay = () => {
+        // find the value the user specified
         let input = document.getElementById("cardVal")
+        // call the method passed through from app.js on the value specified
         this.props.fn(input.value)
+        // reset the value
         input.value = ""
     }
 

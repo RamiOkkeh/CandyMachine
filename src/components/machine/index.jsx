@@ -6,7 +6,9 @@ import Pad from "./numpad"
 import "./style.css"
 import EarnedDisplay from "./earnedDisplay"
 
+// the machine component contains the candy display, the numpad, the credit and earning displays
 class Machine extends React.Component {
+    // the machine will keep track of the candy stocks, positions, and prices
     constructor(props){
         super(props)
         this.state = {
@@ -23,15 +25,22 @@ class Machine extends React.Component {
         }
     }
 
+    // method for finding selected item and purchasing 
     selectItem = (num, callback) => {
+        // finds the item data by the item id provided by the user
         let item = this.state.snacks[num]
+
+        // check if item is in stock
         if(item[1] > 0){
+            // attempt to purchase
             this.props.methods.purchase(item, ()=>{
+                // callback for decreasing item stock after purchase is complete
                 this.setState((old)=> {
                     old.snacks[num][1]-=1
                     return old 
                 })
             })
+            // condition for item not in stock
         } else {
             this.props.methods.setHistory("the item you attempt to purchase is out of stock!")
         }
@@ -39,15 +48,27 @@ class Machine extends React.Component {
 
     render(){
         let {currentMoney, earned, setHistory} = this.props.methods
-        return(<div className="machine">
 
+        return(<div className="machine">
+            
+            {/* the candy display shows the user all available candies, their prices and the id u need to use to select them */}
             <div className="candies">
+                {/* itirate over the candy stored in state and diplay them with the Candy component */}
                 {this.state.snacks.map((info, i)=><Candy key={i} num={i} info={info} image={this.state.images[i%5]}></Candy>)}
             </div>
+
+            {/* this side par contains the numpad, credit display and earned money display */}
             <div className="flex-column">
+                
+                {/* the pad allows the user to select the item they want by their id */}
                 <Pad selectItem={this.selectItem} setHistory={setHistory}></Pad>
+                
+                {/* the money display shows the value of how much money is credited to the machine currently */}
                 <MoneyDisplay money={currentMoney}></MoneyDisplay>
+
+                {/* the earned money display shows the value money the machine accumulated so far */}
                 <EarnedDisplay earned={earned}></EarnedDisplay>
+                
             </div>
             
         </div>)

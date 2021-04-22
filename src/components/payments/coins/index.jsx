@@ -5,7 +5,7 @@ function Coin ({coin, fn}){
     return (<button className="coinButton" onClick={()=>fn(coin)}>{coin === 1 ? "1$" : coin + "c$"}</button>)
 }
 
-
+// coins will allow the user to enter 10, 20, or 50 cents at a time or 1 full dollar
 class Coins extends React.Component {
     render(){
         let {data, fn} = this.props
