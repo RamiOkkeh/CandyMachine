@@ -7,9 +7,12 @@ class Candy extends React.Component {
     }
 
     render(){
-        let {num, info} = this.props, [name, available, price] = info
-        return(<div className="candy">
-                {name}
+        let {num, info, image} = this.props, [name, available, price] = info
+        console.log(image)
+        return(<div className="candy" style={{backgroundImage: `url(${image})`}}>
+                <div>{name}
+                <span className="price"> {price}$ </span> 
+                <span className="num">{num}</span> </div>
         </div>)
     }
 }

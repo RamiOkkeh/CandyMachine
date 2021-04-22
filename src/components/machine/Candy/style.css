@@ -1,5 +1,19 @@
 .candy {
-  width: 120px;
+  width: 140px;
   height: 120px;
   margin: 15px;
+
+  background-size: 80% 80%;
+  background-position-x: 50%;
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+}
+
+.price {
+  color: green;
+}
+
+.num {
+  background-color: orange;
+  border: 2px solid black;
 }
