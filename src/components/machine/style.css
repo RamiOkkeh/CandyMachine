@@ -4,5 +4,5 @@
 .candies {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  width: 1000px;
+  width: 900px;
 }
