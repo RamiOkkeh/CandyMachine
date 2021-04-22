@@ -15,8 +15,11 @@ class Pad extends React.Component {
         }
     }
     render(){
-        return(<div className="pad">
-            {this.state.vals.map((val, i)=><Button key={i} val={val}></Button>)}
+        return(<div>
+                <div className="pad">
+                    {this.state.vals.map((val, i)=><Button key={i} val={val}></Button>)}
+                </div>
+                <div className="display">{this.state.current}</div>
         </div>)
     }
 }
