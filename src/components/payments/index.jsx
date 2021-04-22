@@ -14,9 +14,9 @@ class Payments extends React.Component {
     }
     render(){
         return(<div className="payments">
-                <Coins data={this.state.coins}></Coins>
-                <Notes data={this.state.notes}></Notes>
-                <Card></Card>
+                <Coins data={this.state.coins} fn={this.props.methods.addCoin}></Coins>
+                <Notes data={this.state.notes} fn={this.props.methods.addNote}></Notes>
+                <Card fn={this.props.methods.addCard}></Card>
             </div>)
     }
 }

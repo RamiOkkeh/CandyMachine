@@ -10,8 +10,6 @@ class Machine extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            currentMoney: 0,
-            earned: 0,
             snacks: [["soda", 10, 2.2], ["chips", 5, 3.5], ["chocolate", 1, 10.5], ["candy4", 12, 3], ["candy5", 5, 2],
                      ["candy6", 10, 1], ["chips", 5, 3.5], ["chocolate", 1, 10.5], ["candy4", 12, 3], ["candy5", 5, 2],
                      ["candy6", 10, 1], ["chips", 5, 3.5], ["chocolate", 1, 10.5], ["candy4", 12, 3], ["candy5", 5, 2],
@@ -26,6 +24,7 @@ class Machine extends React.Component {
     }
 
     render(){
+        let {currentMoney, earned} = this.props
         return(<div className="machine">
 
             <div className="candies">
@@ -33,8 +32,8 @@ class Machine extends React.Component {
             </div>
             <div className="flex-column">
                 <Pad></Pad>
-                <MoneyDisplay money={this.state.currentMoney}></MoneyDisplay>
-                <EarnedDisplay earned={this.state.earned}></EarnedDisplay>
+                <MoneyDisplay money={currentMoney}></MoneyDisplay>
+                <EarnedDisplay earned={earned}></EarnedDisplay>
             </div>
             
         </div>)
