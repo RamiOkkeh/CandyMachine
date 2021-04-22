@@ -17,10 +17,11 @@ class Pad extends React.Component {
     onPress = (val) => {
         if(val === "submit"){
             let itemNum = document.getElementById("itemNum").innerText
+            this.setState({current: ""})
             if(itemNum > 24){
                 this.props.setHistory("please select an item from the list")
             } else if (itemNum !== ""){
-                this.props.selectItem(Number(itemNum), ()=>this.setState({current: ""}))
+                this.props.selectItem(Number(itemNum))
             } else {
                 this.props.setHistory("please select an item first")
             }

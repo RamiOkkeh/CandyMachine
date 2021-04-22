@@ -13,6 +13,11 @@
   height: 50px;
   width: 100px;
   background-color: lightgreen;
+  cursor: pointer;
+}
+
+.noteButton:active {
+  background-color: green;
 }
 
 .noteButton:focus {
