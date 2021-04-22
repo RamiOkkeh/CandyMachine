@@ -112,16 +112,17 @@ class App extends React.Component {
     return (
       <div className="App">
 
+        <div></div>
         {/* the machine component contains the candy display, the numpad, the credit and earning displays */}
-        <Machine methods={mMethods}></Machine>
+        <Machine data-testid="machine-comp" methods={mMethods}></Machine>
 
       <div>
 
         {/* the payments component contains three methods for payment, coins, notes and card */}
-        <Payments methods={pMethods}></Payments>
+        <Payments data-testid="payments-comp" methods={pMethods}></Payments>
 
         {/* the logger is used to display relevant information to the user */}
-        <Logger history={this.state.history}></Logger>
+        <Logger data-testid="logger-comp" history={this.state.history}></Logger>
 
       </div>
     </div>
