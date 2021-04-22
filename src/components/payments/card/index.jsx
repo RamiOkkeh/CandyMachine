@@ -12,7 +12,7 @@ class Cards extends React.Component {
     render(){
         return(<div className="cards">
                 <img src="https://icons-for-free.com/iconfiles/png/512/credit+card+debit+card+master+card+icon-1320184902602310693.png" width="100px" alt="cards"/>
-                <input type="number" id="cardVal"/>
+                <input type="number" id="cardVal" min="0"/>
                 <button onClick={this.cardPay}>pay</button>
             </div>)
     }

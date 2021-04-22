@@ -12,9 +12,9 @@ class Machine extends React.Component {
         this.state = {
             snacks: [["soda", 10, 2.2], ["chips", 5, 3.5], ["chocolate", 1, 10.5], ["lolipop", 12, 3], ["ice cream", 5, 2],
                      ["soda", 10, 2.2], ["chips", 5, 3.5], ["chocolate", 1, 10.5], ["lolipop", 12, 3], ["ice cream", 5, 2],
-                     ["soda", 10, 2.2], ["chips", 5, 3.5], ["chocolate", 1, 10.5], ["lolipop", 12, 3], ["ice cream", 5, 2],
-                     ["soda", 10, 2.2], ["chips", 5, 3.5], ["chocolate", 1, 10.5], ["lolipop", 12, 3], ["ice cream", 5, 2],
-                     ["soda", 10, 2.2], ["chips", 5, 3.5], ["chocolate", 1, 10.5], ["lolipop", 12, 3], ["ice cream", 5, 2],],
+                     ["soda", 10, 2.2], ["chips", 5, 3.5], ["chocolate", 0, 10.5], ["lolipop", 12, 3], ["ice cream", 5, 2],
+                     ["soda", 10, 2.2], ["chips", 5, 3.5], ["chocolate", 1, 10.5], ["lolipop", 0, 3], ["ice cream", 5, 2],
+                     ["soda", 0, 2.2], ["chips", 0, 3.5], ["chocolate", 1, 10.5], ["lolipop", 12, 3], ["ice cream", 5, 2],],
             images: ["https://www.elephanthouse.lk/images/site-specific/beverages/product-images/product-main-image/soda_bottle.png", 
                      "https://www.skinnypop.com/wp-content/uploads/2020/01/sea_salt_chips_main@2x.png",
                      "https://cdn.shopify.com/s/files/1/0041/7497/0991/products/819597010213_1_720bb4c2-d6c7-4911-8004-c39b326c04b4_1194x.png?v=1600454119",

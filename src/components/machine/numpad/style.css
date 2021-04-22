@@ -16,6 +16,7 @@
 .padButton {
   width: 60px;
   margin: 3px;
+  cursor: pointer;
 }
 
 .itemDisplay {

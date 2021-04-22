@@ -48,7 +48,7 @@ class App extends React.Component {
     this.setHistory()
     this.setState({
       currentMoney: this.state.currentMoney + (type === 1 ? 1 : type / 100),
-      history: this.state.history += `\nyou add ${type === 1 ? "1$" : type + "c$"} to the machine`
+      history: this.state.history + `\nyou add ${type === 1 ? "1$" : type + "c$"} to the machine`
     }, ()=>{
       this.scroll()
       this.purchase(undefined, undefined, "deposit")
@@ -58,7 +58,7 @@ class App extends React.Component {
   addNote = (val) => {
     this.setState({
       currentMoney: this.state.currentMoney + val,
-      history: this.state.history += `\nyou add ${val}$ to the machine`
+      history: this.state.history + `\nyou add ${val}$ to the machine`
     }, ()=>{
       this.scroll()
       this.purchase(undefined, undefined, "deposit")
@@ -66,15 +66,18 @@ class App extends React.Component {
   }
 
   addCard = (val) => {
-    this.setState({
-      currentMoney: this.state.currentMoney + Number(val),
-      history: this.state.history += `\nyou add ${val}$ to the machine`
-    }, ()=>{
-      this.scroll()
-      this.purchase(undefined, undefined, "deposit")
-    })
+    if(val === ""){
+      this.setState({history: this.state.history + `\nyou must specify a value first`})
+    } else {
+      this.setState({
+        currentMoney: this.state.currentMoney + Number(val),
+        history: this.state.history + `\nyou add ${val}$ to the machine`
+      }, ()=>{
+        this.scroll()
+        this.purchase(undefined, undefined, "deposit")
+      })
+    }
   }
-
 
   render(){
     let pMethods = {addCoin: this.addCoin, addNote: this.addNote, addCard: this.addCard, setHistory: this.setHistory}
