@@ -1,0 +1,11 @@
+.logger {
+  width: 405px;
+  height: 200px;
+  margin: 0px;
+  resize: none;
+  white-space: pre-line;
+  overflow: scroll;
+
+  background-color: rgb(197, 197, 197);
+  border: 2px solid black;
+}

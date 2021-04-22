@@ -1,8 +1,10 @@
 import React from "react"
-import Candy from "./Candy"
+
 import MoneyDisplay from "./moneyDisplay"
+import Candy from "./Candy"
 import Pad from "./numpad"
 import "./style.css"
+import EarnedDisplay from "./earnedDisplay"
 
 class Machine extends React.Component {
     constructor(props){
@@ -32,6 +34,7 @@ class Machine extends React.Component {
             <div className="flex-column">
                 <Pad></Pad>
                 <MoneyDisplay money={this.state.currentMoney}></MoneyDisplay>
+                <EarnedDisplay earned={this.state.earned}></EarnedDisplay>
             </div>
             
         </div>)
